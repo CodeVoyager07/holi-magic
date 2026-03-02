@@ -55,9 +55,9 @@ class Particle{
 class Heart{
   constructor(){
     this.x = Math.random()*canvas.width;
-    this.y = innerHeight + 20;
-    this.size = Math.random()*10 + 8;
-    this.speed = Math.random()*1 + 0.5;
+    this.y = innerHeight + 2;
+    this.size = Math.random()*20 + 8;
+    this.speed = Math.random()*-1.50 + 1.50;
     this.color = color();
     this.life = 400;
   }
@@ -98,10 +98,11 @@ setInterval(()=>{
 
 // Floating hearts spawn
 setInterval(()=>{
-  if(hearts.length < 30){
+  if(hearts.length < 300){
     hearts.push(new Heart());
   }
-},800);
+},80);
+
 
 // Desktop click
 canvas.addEventListener("click",e=>{
