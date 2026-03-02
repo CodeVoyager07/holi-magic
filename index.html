@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holi Magic 🌸</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="ui">
+  <h1 id="title">Happy Holi 🌸</h1>
+
+  <div class="subtitle">
+    Add your fav holipartner name with the song of choice to send them your wishes — Happy Holi with bhaang wali masti 🤣😁
+  </div>
+
+  <div class="controls">
+    <input id="nameInput" placeholder="Enter name..." />
+    <button onclick="generateGreeting()">😂 Funny Wish</button>
+    <button onclick="copyGreeting()">📤 Copy Wish</button>
+    <button onclick="createShareLink()">Create Greeting Link 🌈</button>
+
+    <label class="upload">
+      🎶 Upload Song
+      <input type="file" id="songUpload" accept="audio/*">
+    </label>
+  </div>
+
+  <p id="funnyText"></p>
+</div>
+
+<canvas id="holiCanvas"></canvas>
+
+<audio id="music" controls></audio>
+
+<script src="app.js"></script>
+</body>
+</html>
