@@ -1,0 +1,86 @@
+body{
+  margin:0;
+  background:#000;
+  overflow:hidden;
+  font-family:Poppins,sans-serif;
+}
+
+canvas{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:0;
+}
+
+/* Responsive UI */
+.ui{
+  position:fixed;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  text-align:center;
+  color:white;
+  z-index:10;
+  width:90%;
+  max-width:600px;
+  padding:10px;
+}
+
+h1{
+  font-size:clamp(28px, 6vw, 48px);
+  background:linear-gradient(90deg,#ff0,#f0f,#0ff,#ff0);
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:hue 5s linear infinite;
+}
+
+.subtitle{
+  font-size:clamp(14px, 3vw, 18px);
+  margin:auto;
+  background:linear-gradient(90deg,#ff0,#f0f,#0ff,#ff0);
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:hue 5s linear infinite;
+}
+
+@keyframes hue{
+  to{ filter:hue-rotate(360deg); }
+}
+
+.controls input, button{
+  padding:8px 12px;
+  margin:5px;
+  border-radius:8px;
+  border:none;
+}
+
+button{
+  cursor:pointer;
+}
+
+.upload input{
+  display:none;
+}
+
+#funnyText{
+  max-width:500px;
+  margin:auto;
+  font-size:18px;
+  color:#ffd;
+  animation:fadeUp .6s ease;
+}
+
+audio{
+  position:fixed;
+  bottom:15px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:10;
+  width:90%;
+  max-width:400px;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1;}
+}
